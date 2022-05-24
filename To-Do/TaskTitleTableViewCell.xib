@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskTitleCell" id="XOI-B2-9LY" customClass="TaskTitleTableViewCell" customModule="To_Do" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XOI-B2-9LY" id="gsa-Zw-79c">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="z1g-sX-EQP">
+                        <rect key="frame" x="40" y="16" width="334" height="48"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dn-cy-udf">
+                                <rect key="frame" x="0.0" y="0.0" width="334" height="24.5"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoC-yN-nlh">
+                                <rect key="frame" x="0.0" y="29.5" width="334" height="18.5"/>
+                                <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="z1g-sX-EQP" secondAttribute="bottom" constant="5" id="2C8-jP-TBD"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="z1g-sX-EQP" secondAttribute="trailing" constant="20" id="85B-4c-Kao"/>
+                    <constraint firstItem="z1g-sX-EQP" firstAttribute="leading" secondItem="gsa-Zw-79c" secondAttribute="leadingMargin" constant="20" id="Xd1-r0-n4j"/>
+                    <constraint firstItem="z1g-sX-EQP" firstAttribute="top" secondItem="gsa-Zw-79c" secondAttribute="topMargin" constant="5" id="aaB-gl-Sur"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="taskName" destination="8dn-cy-udf" id="Rcl-PF-hgQ"/>
+                <outlet property="taskTime" destination="uoC-yN-nlh" id="0ih-JK-GKX"/>
+            </connections>
+            <point key="canvasLocation" x="184" y="-23"/>
+        </tableViewCell>
+    </objects>
+</document>

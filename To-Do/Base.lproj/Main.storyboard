@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4Cl-K0-yc2">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--App Tab Bar Controller-->
+        <scene sceneID="t1S-9v-OTb">
+            <objects>
+                <tabBarController id="4Cl-K0-yc2" customClass="AppTabBarController" customModule="To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Zxf-6J-Pou">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="EeO-kw-I7o" kind="relationship" relationship="viewControllers" id="BvC-4p-8EN"/>
+                        <segue destination="EAQ-sS-0CV" kind="relationship" relationship="viewControllers" id="6dJ-vB-xKJ"/>
+                        <segue destination="odX-Tv-u0t" kind="relationship" relationship="viewControllers" id="eDS-1h-56U"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g4P-jC-5GY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="552"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="0VS-Mr-PLo">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wh7-I0-3ze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="EeO-kw-I7o" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="Today" id="ypN-eP-xz7"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2WV-wn-aW3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="107"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="20"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="50"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="rSX-Ip-7hH" kind="relationship" relationship="rootViewController" id="YdU-CO-RkG"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1204" y="1278"/>
+        </scene>
+        <!--Today-->
+        <scene sceneID="FGa-iW-aWy">
+            <objects>
+                <viewController id="rSX-Ip-7hH" customClass="TodayViewController" customModule="To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pav-Ui-hab">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3Ti-FN-aRF">
+                                <rect key="frame" x="0.0" y="151" width="414" height="662"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aXj-PP-uWv"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aXj-PP-uWv" firstAttribute="bottom" secondItem="3Ti-FN-aRF" secondAttribute="bottom" id="Jb8-4L-db5"/>
+                            <constraint firstItem="3Ti-FN-aRF" firstAttribute="leading" secondItem="aXj-PP-uWv" secondAttribute="leading" id="YrU-zD-UZ5"/>
+                            <constraint firstItem="3Ti-FN-aRF" firstAttribute="top" secondItem="aXj-PP-uWv" secondAttribute="top" id="eXb-kf-7TS"/>
+                            <constraint firstItem="aXj-PP-uWv" firstAttribute="trailing" secondItem="3Ti-FN-aRF" secondAttribute="trailing" id="xm5-N7-QMx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Today" id="GAv-zG-8bm">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="86H-9Q-Pru">
+                            <connections>
+                                <action selector="addTask:" destination="rSX-Ip-7hH" id="ojn-Uh-jeC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="taskTableView" destination="3Ti-FN-aRF" id="Rih-Jq-8pK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="po4-ib-fTt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1204" y="2002"/>
+        </scene>
+        <!--Tomorrow-->
+        <scene sceneID="bJd-JI-rNT">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n2B-v8-Tji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="EAQ-sS-0CV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="2" title="Tomorrow" id="80r-a8-ngJ"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VpS-R6-9Q6">
+                        <rect key="frame" x="0.0" y="44" width="414" height="107"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="50"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="50"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="mGi-Mp-eBq" kind="relationship" relationship="rootViewController" id="bbL-DL-ZSo"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-423" y="1278"/>
+        </scene>
+        <!--Tomorrow-->
+        <scene sceneID="yR0-zS-ati">
+            <objects>
+                <viewController id="mGi-Mp-eBq" customClass="TomorrowViewController" customModule="To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q7Z-wC-B6t">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="j7i-hM-Fle">
+                                <rect key="frame" x="0.0" y="151" width="414" height="613"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FX3-DX-5RA"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FX3-DX-5RA" firstAttribute="trailing" secondItem="j7i-hM-Fle" secondAttribute="trailing" id="5je-Pd-nZ8"/>
+                            <constraint firstItem="j7i-hM-Fle" firstAttribute="top" secondItem="FX3-DX-5RA" secondAttribute="top" id="JEo-dT-VGF"/>
+                            <constraint firstItem="j7i-hM-Fle" firstAttribute="leading" secondItem="FX3-DX-5RA" secondAttribute="leading" id="aUY-7R-fWs"/>
+                            <constraint firstItem="FX3-DX-5RA" firstAttribute="bottom" secondItem="j7i-hM-Fle" secondAttribute="bottom" id="ydg-2B-FWd"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Tomorrow" id="oaJ-4g-gDK">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="iuB-bh-1Qh">
+                            <connections>
+                                <action selector="addTask:" destination="mGi-Mp-eBq" id="xeV-Qg-iCo"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="taskTableView" destination="j7i-hM-Fle" id="A2d-0t-zWa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="apX-yh-Hwa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-423" y="2002"/>
+        </scene>
+        <!--Upcoming-->
+        <scene sceneID="jxV-IM-fAH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ywh-Kh-ie4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="odX-Tv-u0t" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="3" title="Upcoming" id="nJr-ng-d0G"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="XmQ-Xr-mqv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="107"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="50"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="50"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Yqv-ie-X8D" kind="relationship" relationship="rootViewController" id="jqw-LD-nic"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="312" y="1278"/>
+        </scene>
+        <!--Upcoming-->
+        <scene sceneID="wf6-xT-aAm">
+            <objects>
+                <viewController id="Yqv-ie-X8D" customClass="UpcomingViewController" customModule="To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1jD-1f-KNh">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="1d4-YA-oid">
+                                <rect key="frame" x="0.0" y="151" width="414" height="613"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dXh-wc-MZJ"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1d4-YA-oid" firstAttribute="top" secondItem="dXh-wc-MZJ" secondAttribute="top" id="0DQ-vM-8mc"/>
+                            <constraint firstItem="dXh-wc-MZJ" firstAttribute="trailing" secondItem="1d4-YA-oid" secondAttribute="trailing" id="G0q-xC-dhP"/>
+                            <constraint firstItem="1d4-YA-oid" firstAttribute="leading" secondItem="dXh-wc-MZJ" secondAttribute="leading" id="Kon-fj-Zud"/>
+                            <constraint firstItem="dXh-wc-MZJ" firstAttribute="bottom" secondItem="1d4-YA-oid" secondAttribute="bottom" id="OyC-yb-D3e"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Upcoming" id="uSs-91-QhA">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="J1p-7j-pyk">
+                            <connections>
+                                <action selector="addTask:" destination="Yqv-ie-X8D" id="VCB-UZ-i3f"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="taskTableView" destination="1d4-YA-oid" id="sK3-rf-B2R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wlS-BM-onF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="312" y="2002"/>
+        </scene>
+        <!--Add Task View Controller-->
+        <scene sceneID="AsJ-Pa-RS5">
+            <objects>
+                <viewController storyboardIdentifier="AddTaskViewController" id="p2e-9f-KMu" customClass="AddTaskViewController" customModule="To_Do" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jKk-Sa-Agb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="800" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="WFK-W0-aC9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="720"/>
+                                <color key="backgroundColor" red="0.68896481549999999" green="0.4417286453" blue="0.1571548804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="HYP-BL-XZa">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Task" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C28-No-kdi">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="C28-No-kdi" firstAttribute="leading" secondItem="HYP-BL-XZa" secondAttribute="leading" id="A5P-fG-Q8c"/>
+                                        <constraint firstAttribute="bottom" secondItem="C28-No-kdi" secondAttribute="bottom" id="CJU-t8-y4U"/>
+                                        <constraint firstItem="C28-No-kdi" firstAttribute="top" secondItem="HYP-BL-XZa" secondAttribute="top" id="GAz-hO-czZ"/>
+                                        <constraint firstAttribute="trailing" secondItem="C28-No-kdi" secondAttribute="trailing" id="yYL-3e-ubN"/>
+                                    </constraints>
+                                </view>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addTaskCell" id="AtC-Eh-UH6" customClass="InputTaskTableViewCell" customModule="To_Do" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="104.5" width="414" height="800"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AtC-Eh-UH6" id="tFw-Fy-7z0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="800"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="K6d-du-L2f">
+                                                    <rect key="frame" x="20" y="20" width="374" height="760"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Task" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3V-Xf-INb">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="Siw-Jy-NPh"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eCX-1B-cSd">
+                                                            <rect key="frame" x="0.0" y="40" width="374" height="60"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="60" id="YFs-n6-JMo"/>
+                                                            </constraints>
+                                                            <color key="textColor" systemColor="labelColor"/>
+                                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyS-Ae-alg">
+                                                            <rect key="frame" x="0.0" y="110" width="374" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="Mv4-zn-GeG"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FcQ-89-EUY">
+                                                            <rect key="frame" x="0.0" y="150" width="374" height="179"/>
+                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                            <color key="textColor" systemColor="labelColor"/>
+                                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="16"/>
+                                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        </textView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scheduled for" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvG-kY-0PO">
+                                                            <rect key="frame" x="0.0" y="339" width="374" height="30"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="30" id="Kfo-sy-FY8"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="TrebuchetMS" family="Trebuchet MS" pointSize="25"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="BZe-Um-g8E">
+                                                            <rect key="frame" x="0.0" y="379" width="374" height="381"/>
+                                                            <connections>
+                                                                <action selector="dateChanged:" destination="AtC-Eh-UH6" eventType="valueChanged" id="9KT-qq-Am4"/>
+                                                            </connections>
+                                                        </datePicker>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="K6d-du-L2f" firstAttribute="top" secondItem="tFw-Fy-7z0" secondAttribute="top" constant="20" id="2cc-1K-Ji7"/>
+                                                <constraint firstItem="K6d-du-L2f" firstAttribute="leading" secondItem="tFw-Fy-7z0" secondAttribute="leading" constant="20" id="IXu-W5-MEv"/>
+                                                <constraint firstAttribute="bottom" secondItem="K6d-du-L2f" secondAttribute="bottom" constant="20" id="zUs-KV-BGr"/>
+                                                <constraint firstAttribute="trailing" secondItem="K6d-du-L2f" secondAttribute="trailing" constant="20" id="zbE-KD-7Nv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="datePicker" destination="BZe-Um-g8E" id="6ib-3d-o72"/>
+                                            <outlet property="taskDetail" destination="FcQ-89-EUY" id="LC7-Rc-LxJ"/>
+                                            <outlet property="taskTitle" destination="eCX-1B-cSd" id="2AE-9G-IyC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4jG-jy-jJK">
+                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
+                                <items>
+                                    <barButtonItem title="Add" id="GWb-Yj-0bz">
+                                        <connections>
+                                            <action selector="addTask:" destination="p2e-9f-KMu" id="nTl-kW-6r2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="set-fy-clA"/>
+                                    <barButtonItem title="Cancel" id="9vm-K3-1Aj">
+                                        <connections>
+                                            <action selector="cancelTask:" destination="p2e-9f-KMu" id="ps2-II-TGB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UUa-hN-M3P"/>
+                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                        <constraints>
+                            <constraint firstItem="WFK-W0-aC9" firstAttribute="top" secondItem="UUa-hN-M3P" secondAttribute="top" id="2ua-TL-XIR"/>
+                            <constraint firstItem="UUa-hN-M3P" firstAttribute="bottom" secondItem="4jG-jy-jJK" secondAttribute="bottom" id="57k-LV-GCb"/>
+                            <constraint firstItem="UUa-hN-M3P" firstAttribute="trailing" secondItem="WFK-W0-aC9" secondAttribute="trailing" id="Qky-30-hTr"/>
+                            <constraint firstItem="WFK-W0-aC9" firstAttribute="leading" secondItem="UUa-hN-M3P" secondAttribute="leading" id="S3W-da-yBs"/>
+                            <constraint firstItem="4jG-jy-jJK" firstAttribute="leading" secondItem="UUa-hN-M3P" secondAttribute="leading" id="orP-ZE-MRE"/>
+                            <constraint firstItem="4jG-jy-jJK" firstAttribute="top" secondItem="WFK-W0-aC9" secondAttribute="bottom" id="sCD-o9-Oci"/>
+                            <constraint firstItem="4jG-jy-jJK" firstAttribute="trailing" secondItem="UUa-hN-M3P" secondAttribute="trailing" id="z1m-Ab-IYb"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="addTaskTableView" destination="WFK-W0-aC9" id="2zs-qt-fFr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eK1-qe-2QF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="992" y="2003"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
