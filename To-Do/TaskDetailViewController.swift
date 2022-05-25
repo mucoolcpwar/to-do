@@ -80,19 +80,23 @@ class TaskDetailViewController: UIViewController {
     @IBAction func addTask(_ sender: Any) {
         let newView = self.storyboard?.instantiateViewController(withIdentifier: "AddTaskViewController") as! AddTaskViewController
         newView.delegate = self
+        taskAction = .add
         newView.modalPresentationStyle = .pageSheet
         self.present(newView, animated: true, completion: nil)
     }
     
-    func updateTask() {
+    func update(task: NSManagedObject) {
         let newView = self.storyboard?.instantiateViewController(withIdentifier: "AddTaskViewController") as! AddTaskViewController
         newView.delegate = self
+        taskAction = .modify
+        newView.task = task
         newView.modalPresentationStyle = .pageSheet
         self.present(newView, animated: true, completion: nil)
     }
     
     
     func delete(task: NSManagedObject){
+        taskAction = .delete
         guard let appDelegate =
                 UIApplication.shared.delegate as? AppDelegate else {
             return
@@ -182,7 +186,7 @@ extension TaskDetailViewController: TaskDetailTableViewCellDelegate {
     }
     
     func modifyTask(_ task: NSManagedObject) {
-        self.updateTask()
+        self.update(task: task)
     }
     
     

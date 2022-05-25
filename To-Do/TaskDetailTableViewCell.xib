@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ALI-ND-hcv">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
+                        <rect key="frame" x="20" y="0.0" width="280" height="100"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eat-Et-B65">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jli-4d-Xqk">
-                                        <rect key="frame" x="20" y="0.0" width="280" height="55"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="55"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="55" id="ER3-kF-mML"/>
                                         </constraints>
@@ -35,17 +35,17 @@
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstItem="Jli-4d-Xqk" firstAttribute="leading" secondItem="Eat-Et-B65" secondAttribute="leading" constant="20" id="23f-et-5y2"/>
+                                    <constraint firstItem="Jli-4d-Xqk" firstAttribute="leading" secondItem="Eat-Et-B65" secondAttribute="leading" id="23f-et-5y2"/>
                                     <constraint firstAttribute="bottom" secondItem="Jli-4d-Xqk" secondAttribute="bottom" id="ArO-2Q-O2l"/>
-                                    <constraint firstAttribute="trailing" secondItem="Jli-4d-Xqk" secondAttribute="trailing" constant="20" id="IuT-Zn-dTk"/>
+                                    <constraint firstAttribute="trailing" secondItem="Jli-4d-Xqk" secondAttribute="trailing" id="IuT-Zn-dTk"/>
                                     <constraint firstItem="Jli-4d-Xqk" firstAttribute="top" secondItem="Eat-Et-B65" secondAttribute="top" id="oHK-Yk-kYy"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="JFY-Y7-Cv6">
-                                <rect key="frame" x="0.0" y="60" width="320" height="40"/>
+                                <rect key="frame" x="0.0" y="60" width="280" height="40"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xat-34-SOQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="40"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="40"/>
                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -57,7 +57,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VSD-NQ-GsS">
-                                        <rect key="frame" x="160" y="0.0" width="160" height="40"/>
+                                        <rect key="frame" x="140" y="0.0" width="140" height="40"/>
                                         <color key="backgroundColor" systemColor="systemRedColor"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
@@ -78,8 +78,8 @@
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="ALI-ND-hcv" secondAttribute="bottom" id="9gd-N7-j3M"/>
-                    <constraint firstAttribute="trailing" secondItem="ALI-ND-hcv" secondAttribute="trailing" id="ojQ-VE-RU6"/>
-                    <constraint firstItem="ALI-ND-hcv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="pTo-l2-3Nq"/>
+                    <constraint firstAttribute="trailing" secondItem="ALI-ND-hcv" secondAttribute="trailing" constant="20" id="ojQ-VE-RU6"/>
+                    <constraint firstItem="ALI-ND-hcv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="pTo-l2-3Nq"/>
                     <constraint firstItem="ALI-ND-hcv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="qUe-KD-9am"/>
                 </constraints>
             </tableViewCellContentView>
